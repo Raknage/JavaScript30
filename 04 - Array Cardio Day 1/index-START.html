@@ -110,7 +110,7 @@
           .filter((e) => e.toLowerCase().includes("de"));
       }
 
-      /* 
+      /*
         "Boulevard de l'Amiral-Bruix",
         "Boulevard des Capucines",
         "Boulevard de la Chapelle",
@@ -148,6 +148,13 @@
         "car",
         "truck",
       ];
+
+      const counted = data.reduce((a, c) => {
+        const currCount = a[c] ?? 0;
+        a[c] = currCount + 1;
+        return a;
+      }, {});
+      console.table(counted);
     </script>
   </body>
 </html>
