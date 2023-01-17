@@ -31,6 +31,10 @@
       );
       console.log(oneNineteen);
       // Array.prototype.every() // is everyone 19 or older?
+      const allNineteen = people.every((e) =>
+        2023 - e.year >= 19 ? true : false
+      );
+      console.log(allNineteen);
 
       // Array.prototype.find()
       // Find is like filter, but instead returns just the one you are looking for
